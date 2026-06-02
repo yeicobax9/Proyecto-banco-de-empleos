@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurar Contraseña</title>
+    <link rel="stylesheet" href="../css/OC.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/Logo2.png" alt="Logo">
+    </header>
+
+    <section>
+        <hr>
+        <form action="#" method="POST">
+            <h2>Restaurar Contraseña</h2>
+            <p>Ingresa el correo electrónico vinculado a tu cuenta. Recibirás un código para cambiar tu contraseña.</p>
+            
+            <label for="email">Correo electrónico:</label>
+            <input required type="email" id="email" name="email" placeholder="ejemplo@email.com">
+            
+            <label for="codigo">Código de verificación:</label>
+            <input required type="text" id="codigo" name="codigo" placeholder="Ingresa el código recibido">
+            
+            <label for="nueva-contraseña">Nueva contraseña:</label>
+            <input required type="password" id="nueva-contraseña" name="nueva-contraseña" placeholder="Mínimo 8 caracteres">
+            
+            <label for="confirmar-contraseña">Confirma la contraseña:</label>
+            <input required type="password" id="confirmar-contraseña" name="confirmar-contraseña" placeholder="Repite tu contraseña">
+            
+            <button type="submit">Restaurar Contraseña</button>
+        </form>
+    </section>
+
+    <section>
+        <p>¿Recordaste tu contraseña?</p>
+        <button><a href="login.html">Volver a Inicio de Sesión</a></button>
+    </section>
+
+</body>
+</html>
+    
+</body>

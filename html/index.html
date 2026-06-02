@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Banco de Empleos</title>
+    <link rel="stylesheet" href="../css/Inicio.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/Logo2.png" alt="Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="inicio.html">Inicio</a>
+                <a href="servicios.html">Empleos</a>
+                <a href="QS.html">Quienes Somos</a>
+                <a href="contactenos.html">Contáctenos</a>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+                <button class="btn-login"><a href="login.html">Iniciar Sesión</a></button>
+                <button class="btn-register"><a href="crear-cuenta.html">Registrarse</a></button>
+                <button class="btn-demo" id="demoBtn" title="Prueba el sistema con un usuario demo">Demo</button>
+            </div>
+            
+            <div class="user-section" id="userSection" style="display: none;">
+                <div class="notifications-container">
+                    <button class="notification-bell" id="notificationBell">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-badge" id="notificationBadge">3</span>
+                    </button>
+                    <div class="notifications-panel" id="notificationsPanel">
+                        <div class="notifications-header">
+                            <h3>Notificaciones</h3>
+                            <button class="close-notifications" id="closeNotifications">✕</button>
+                        </div>
+                        <div class="notifications-list" id="notificationsList">
+                            <!-- Notificaciones se cargarán aquí -->
+                        </div>
+                        <div class="notifications-footer">
+                            <a href="#" class="see-all">Ver todas las notificaciones</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="profile-container">
+                        <button class="profile-avatar" id="profileBtn" title="Menú de usuario">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237CB342'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M12 14c-6 0-8 3-8 3v6h16v-6s-2-3-8-3z'/%3E%3C/svg%3E" alt="Perfil">
+                        </button>
+                        <div class="profile-menu" id="profileMenu">
+                            <div class="profile-menu-header">
+                                <p id="userName">Juan Pérez</p>
+                                <p id="userEmail" class="user-email">juan@ejemplo.com</p>
+                            </div>
+                            <hr>
+                            <a href="#" class="profile-menu-item" id="viewProfileLink">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                Ver Perfil
+                            </a>
+                            <a href="#" class="profile-menu-item" id="myApplicationsLink">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 3L5 7m0 0l4 4m-4-4h16M9 9l4 4m-4-4v12m10-16l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                                Mis Postulaciones
+                            </a>
+                            <a href="#" class="profile-menu-item" id="savedJobsLink">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>
+                                Empleos Guardados
+                            </a>
+                            <a href="#" class="profile-menu-item" id="settingsLink">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6m-17.78 7.78l4.24-4.24m3.08-3.08l4.24-4.24"></path>
+                                </svg>
+                                Configuración
+                            </a>
+                            <hr>
+                            <a href="#" class="profile-menu-item logout" id="logoutLink">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 8 20 12 16 16"></polyline>
+                                    <line x1="9" y1="12" x2="20" y2="12"></line>
+                                </svg>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Encuentra el trabajo ideal para ti</h1>
+            <p>Publica tu hoja de vida y accede a miles de ofertas laborales en segundos</p>
+            <div class="cta-buttons">
+                <button class="btn-primary"><a href="servicios.html">Buscar Empleo</a></button>
+            </div>
+        </section>
+
+        <section class="vacantes-section">
+            <h2>Mejores Vacantes Sin Experiencia Laboral</h2>
+            <div class="vacantes-grid">
+                <div class="vacante-card">
+                    <img src="../img/callcenter.png" alt="Call Center">
+                    <h3>Call center / Atención al cliente</h3>
+                    <p>Trabajos que consisten en atender llamadas, resolver dudas, registrar pedidos o dar soporte básico. Ideales para desarrollar habilidades de comunicación, paciencia y manejo de clientes.</p>
+                    <span class="salary">Sueldo: 1.5 a 2 salarios mínimos</span>
+                </div>
+
+                <div class="vacante-card">
+                    <img src="../img/bodega.png" alt="Logística">
+                    <h3>Logística y bodega</h3>
+                    <p>Labores de empaque, inventario, carga, descarga y organización de productos. No requieren experiencia previa y permiten aprender sobre procesos de almacenamiento y distribución.</p>
+                    <span class="salary">Sueldo: 1.5 a 2 salarios mínimos</span>
+                </div>
+
+                <div class="vacante-card">
+                    <img src="../img/ventas.png" alt="Ventas">
+                    <h3>Ventas y Asesorías</h3>
+                    <p>Oportunidades en tiendas, puntos de venta o ventas telefónicas. Se aprende a persuadir, atender clientes y alcanzar metas comerciales, con posibilidad de crecer dentro de la empresa.</p>
+                    <span class="salary">Sueldo: 1.5 a 3 salarios mínimos</span>
+                </div>
+
+                <div class="vacante-card">
+                    <img src="../img/practicas.png" alt="Prácticas">
+                    <h3>Prácticas Profesionales</h3>
+                    <p>Dirigidas a estudiantes en etapa final de sus estudios. Permiten aplicar lo aprendido en un entorno real y adquirir la primera experiencia que abre puertas al mercado laboral.</p>
+                    <span class="salary">Remunerado o voluntario</span>
+                </div>
+
+                <div class="vacante-card">
+                    <img src="../img/pasantias.png" alt="Pasanías">
+                    <h3>Pasanías y Voluntariados</h3>
+                    <p>Espacios para aportar a proyectos sociales, culturales o académicos. Aunque muchas veces no son remunerados, fortalecen el perfil profesional y muestran compromiso e iniciativa.</p>
+                    <span class="salary">Voluntario / Sin experiencia</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Banco de Empleos. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 002.856-10.986c-3.477 1.409-6.084 2.086-8.077 2.417.2-.763.415-1.46.614-2.09-2.106.896-4.04 1.77-5.805 2.591-1.922-2.022-4.92-3.278-8.06-2.911.261 2.541 1.5 4.851 3.74 5.941-2.505.179-4.753.547-6.328 1.329 2.953 3.414 7.097 5.235 12.455 5.027-3.07 15.093 10.668 19.5 19.18 10.947c2.913.405 5.74 1.065 8.56 2.044z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.63c-.794.297-1.473.648-2.15 1.325-.677.677-1.028 1.356-1.325 2.15-.297.788-.5 1.658-.56 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.263 2.148.56 2.936.297.792.648 1.472 1.325 2.15.677.677 1.356 1.028 2.15 1.325.788.297 1.659.5 2.936.56 1.28.057 1.687.072 4.947.072s3.667-.015 4.947-.072c1.280-.06 2.136-.263 2.905-.56.745-.297 1.433-.648 2.11-1.325.677-.677 1.028-1.355 1.325-2.15.297-.789.5-1.66.56-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.263-2.149-.56-2.936-.297-.792-.648-1.472-1.325-2.15-.677-.677-1.355-1.028-2.15-1.325-.789-.297-1.66-.5-2.936-.56C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.070 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 100-8 4 4 0 000 8zm4.965-10.322a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88z"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136c.502-1.884.502-5.814.502-5.814s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de Notificaciones
+        const mockNotifications = [
+            {
+                id: 1,
+                type: 'job',
+                title: 'Nueva Oferta: Desarrollador Full Stack',
+                message: 'Se ha encontrado una nueva oferta que coincide con tu perfil',
+                time: 'Hace 2 horas',
+                unread: true
+            },
+            {
+                id: 2,
+                type: 'application',
+                title: 'Actualización de Postulación',
+                message: 'Tu candidatura para "Especialista en Ventas" está en revisión',
+                time: 'Hace 5 horas',
+                unread: true
+            },
+            {
+                id: 3,
+                type: 'message',
+                title: 'Mensaje de TechCorp Solutions',
+                message: 'La empresa quiere conocer más sobre tu experiencia',
+                time: 'Hace 1 día',
+                unread: true
+            },
+            {
+                id: 4,
+                type: 'job',
+                title: 'Oferta: Asistente Administrativo',
+                message: 'Coincide con tus intereses y habilidades',
+                time: 'Hace 2 días',
+                unread: false
+            }
+        ];
+
+        let isLoggedIn = false;
+        let userData = {
+            name: 'Juan Pérez',
+            email: 'juan@example.com'
+        };
+
+        // Elementos del DOM
+        const authButtons = document.getElementById('authButtons');
+        const userSection = document.getElementById('userSection');
+        const notificationBell = document.getElementById('notificationBell');
+        const notificationsPanel = document.getElementById('notificationsPanel');
+        const notificationsList = document.getElementById('notificationsList');
+        const closeNotifications = document.getElementById('closeNotifications');
+        const notificationBadge = document.getElementById('notificationBadge');
+
+        // Función para verificar si el usuario está logueado (simulado)
+        function checkLoginStatus() {
+            // Simular que el usuario está logueado si tiene sesión en localStorage
+            const userSession = localStorage.getItem('userLoggedIn');
+            if (userSession === 'true') {
+                isLoggedIn = true;
+                showUserSection();
+                loadNotifications();
+                updateProfileMenu();
+            }
+        }
+
+        // Mostrar/ocultar sección de usuario
+        function showUserSection() {
+            authButtons.style.display = 'none';
+            userSection.style.display = 'flex';
+        }
+
+        // Cargar notificaciones
+        function loadNotifications() {
+            notificationsList.innerHTML = '';
+            const unreadCount = mockNotifications.filter(n => n.unread).length;
+            notificationBadge.textContent = unreadCount;
+
+            mockNotifications.forEach(notification => {
+                const notifElement = document.createElement('div');
+                notifElement.className = `notification-item ${notification.unread ? 'unread' : ''}`;
+                notifElement.innerHTML = `
+                    <span class="notification-type ${notification.type}" 
+                          title="${notification.type === 'job' ? 'Nueva Oferta' : notification.type === 'application' ? 'Postulación' : 'Mensaje'}">
+                        ${notification.type === 'job' ? '💼' : notification.type === 'application' ? '📝' : '💬'}
+                    </span>
+                    <h4>${notification.title}</h4>
+                    <p>${notification.message}</p>
+                    <span class="notification-time">${notification.time}</span>
+                `;
+                notifElement.addEventListener('click', () => markAsRead(notification.id));
+                notificationsList.appendChild(notifElement);
+            });
+        }
+
+        // Marcar notificación como leída
+        function markAsRead(notificationId) {
+            const notification = mockNotifications.find(n => n.id === notificationId);
+            if (notification) {
+                notification.unread = false;
+                loadNotifications();
+            }
+        }
+
+        // Toggle panel de notificaciones
+        notificationBell.addEventListener('click', (e) => {
+            e.stopPropagation();
+            notificationsPanel.classList.toggle('active');
+        });
+
+        // Cerrar panel
+        closeNotifications.addEventListener('click', (e) => {
+            e.stopPropagation();
+            notificationsPanel.classList.remove('active');
+        });
+
+        // Cerrar panel al hacer clic fuera
+        document.addEventListener('click', () => {
+            notificationsPanel.classList.remove('active');
+        });
+
+        // Simular login al hacer clic en "Iniciar Sesión"
+        const loginBtn = document.querySelector('.btn-login a');
+        if (loginBtn) {
+            loginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Simular que el usuario se logueó
+                localStorage.setItem('userLoggedIn', 'true');
+                isLoggedIn = true;
+                showUserSection();
+                loadNotifications();
+                updateProfileMenu();
+                alert('¡Sesión iniciada! Ahora puedes ver tus notificaciones.');
+            });
+        }
+
+        // Cargar estado de login al iniciar la página
+        document.addEventListener('DOMContentLoaded', checkLoginStatus);
+
+        // Botón Demo
+        const demoBtn = document.getElementById('demoBtn');
+        if (demoBtn) {
+            demoBtn.addEventListener('click', () => {
+                localStorage.setItem('userLoggedIn', 'true');
+                isLoggedIn = true;
+                showUserSection();
+                loadNotifications();
+                updateProfileMenu();
+                alert('¡Sesión demo iniciada! Ahora puedes probar el sistema de notificaciones. Haz clic en el ícono de campana.');
+            });
+        }
+
+        // Menú de Perfil
+        const profileBtn = document.getElementById('profileBtn');
+        const profileMenu = document.getElementById('profileMenu');
+        const viewProfileLink = document.getElementById('viewProfileLink');
+        const myApplicationsLink = document.getElementById('myApplicationsLink');
+        const savedJobsLink = document.getElementById('savedJobsLink');
+        const settingsLink = document.getElementById('settingsLink');
+        const logoutLink = document.getElementById('logoutLink');
+
+        // Toggle menú de perfil
+        if (profileBtn) {
+            profileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle('active');
+            });
+        }
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', () => {
+            profileMenu.classList.remove('active');
+        });
+
+        // Cerrar menú al hacer clic dentro de él
+        profileMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Actualizar datos del perfil
+        function updateProfileMenu() {
+            const userNameEl = document.getElementById('userName');
+            const userEmailEl = document.getElementById('userEmail');
+            if (userNameEl) userNameEl.textContent = userData.name;
+            if (userEmailEl) userEmailEl.textContent = userData.email;
+        }
+
+        // Manejadores de opciones del menú
+        if (viewProfileLink) {
+            viewProfileLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = 'perfil.html';
+            });
+        }
+
+        if (myApplicationsLink) {
+            myApplicationsLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Ir a: Mis Postulaciones\n(Ver todas tus postulaciones activas)');
+                profileMenu.classList.remove('active');
+            });
+        }
+
+        if (savedJobsLink) {
+            savedJobsLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Ir a: Empleos Guardados\n(Ver todos los empleos que has guardado)');
+                profileMenu.classList.remove('active');
+            });
+        }
+
+        if (settingsLink) {
+            settingsLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Ir a: Configuración\n(Personaliza tu perfil y preferencias)');
+                profileMenu.classList.remove('active');
+            });
+        }
+
+        if (logoutLink) {
+            logoutLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('userLoggedIn');
+                isLoggedIn = false;
+                authButtons.style.display = 'flex';
+                userSection.style.display = 'none';
+                notificationsPanel.classList.remove('active');
+                profileMenu.classList.remove('active');
+                alert('Has cerrado sesión exitosamente.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacantes - Banco de Empleos</title>
+    <link rel="stylesheet" href="../css/servicios.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/Logo2.png" alt="Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="inicio.html">Inicio</a>
+                <a href="servicios.html">Empleos</a>
+                <a href="QS.html">Quienes Somos</a>
+                <a href="contactenos.html">Contáctenos</a>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn-login"><a href="login.html">Iniciar Sesión</a></button>
+                <button class="btn-register"><a href="crear-cuenta.html">Registrarse</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Encuentra tu próxima oportunidad laboral</h1>
+            <p>Explora miles de vacantes disponibles en todo el país</p>
+        </section>
+
+        <section class="busqueda-section">
+            <div class="search-container">
+                <input type="text" id="buscar-empleo" placeholder="Buscar por cargo, empresa o palabra clave..." class="search-input">
+                <button class="btn-buscar">Buscar</button>
+            </div>
+            <div class="filtros">
+                <select id="filtro-categoria" class="filtro-select">
+                    <option value="">Todas las categorías</option>
+                    <option value="call-center">Call Center</option>
+                    <option value="logistica">Logística</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="practicas">Prácticas</option>
+                    <option value="tecnologia">Tecnología</option>
+                </select>
+                <select id="filtro-salario" class="filtro-select">
+                    <option value="">Todos los salarios</option>
+                    <option value="1-2">1 a 2 salarios mínimos</option>
+                    <option value="2-3">2 a 3 salarios mínimos</option>
+                    <option value="3+">3+ salarios mínimos</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="vacantes-section">
+            <div class="vacantes-grid">
+                <div class="vacante-card">
+                    <div class="vacante-header">
+                        <h3>Asistente de Call Center</h3>
+                        <span class="empresa">TechSupport Colombia</span>
+                    </div>
+                    <p class="descripcion">Buscamos representantes de servicio al cliente para atender consultas telefónicas. Training completo incluido. Horario flexible disponible.</p>
+                    <div class="vacante-details">
+                        <span class="salary">💰 1.5 a 2 salarios mínimos</span>
+                        <span class="location">📍 Bogotá, Cundinamarca</span>
+                        <span class="experience">👥 Sin experiencia requerida</span>
+                    </div>
+                    <a href="callcenter.html" class="btn-aplicar">Ver Detalles</a>
+                </div>
+
+                <div class="vacante-card">
+                    <div class="vacante-header">
+                        <h3>Operario de Bodega</h3>
+                        <span class="empresa">LogísticaFast Express</span>
+                    </div>
+                    <p class="descripcion">Se requiere personal para operaciones de empaque, inventario y distribución. Ambiente dinámico y trabajo en equipo.</p>
+                    <div class="vacante-details">
+                        <span class="salary">💰 1.5 a 2 salarios mínimos</span>
+                        <span class="location">📍 Medellín, Antioquia</span>
+                        <span class="experience">👥 Experiencia mínima: 3 meses</span>
+                    </div>
+                    <button class="btn-aplicar">Ver Detalles</button>
+                </div>
+
+                <div class="vacante-card">
+                    <div class="vacante-header">
+                        <h3>Asesor de Ventas</h3>
+                        <span class="empresa">Retail Solutions Group</span>
+                    </div>
+                    <p class="descripcion">Únete a nuestro equipo de ventas. Comisiones atractivas + bonificaciones. Ambiente inclusivo y oportunidades de crecimiento.</p>
+                    <div class="vacante-details">
+                        <span class="salary">💰 1.5 a 3 salarios mínimos + comisión</span>
+                        <span class="location">📍 Cali, Valle del Cauca</span>
+                        <span class="experience">👥 Sin experiencia</span>
+                    </div>
+                    <button class="btn-aplicar">Ver Detalles</button>
+                </div>
+
+                <div class="vacante-card">
+                    <div class="vacante-header">
+                        <h3>Practicante de Ingeniería</h3>
+                        <span class="empresa">InnovateTech Solutions</span>
+                    </div>
+                    <p class="descripcion">Practicante en ingeniería de software para proyecto de desarrollo. Mentoría de profesionales experimentados. Posibilidad de vinculación laboral.</p>
+                    <div class="vacante-details">
+                        <span class="salary">💰 $800,000 - $1,200,000</span>
+                        <span class="location">📍 Bogotá, Cundinamarca</span>
+                        <span class="experience">👥 Estudiante activo</span>
+                    </div>
+                    <button class="btn-aplicar">Ver Detalles</button>
+                </div>
+
+                <div class="vacante-card">
+                    <div class="vacante-header">
+                        <h3>Especialista en Marketing Digital</h3>
+                        <span class="empresa">Digital Marketing Pro</span>
+                    </div>
+                    <p class="descripcion">Gestión de redes sociales y campañas digitales. Experiencia en herramientas de marketing. Trabajo remoto disponible.</p>
+                    <div class="vacante-details">
+                        <span class="salary">💰 2 a 3 salarios mínimos</span>
+                        <span class="location">📍 Remoto</span>
+                        <span class="experience">👥 1-2 años experiencia</span>
+                    </div>
+                    <button class="btn-aplicar">Ver Detalles</button>
+                </div>
+
+                <div class="vacante-card">
+                    <div class="vacante-header">
+                        <h3>Conductor Repartidor</h3>
+                        <span class="empresa">Express Delivery Colombia</span>
+                    </div>
+                    <p class="descripcion">Buscamos conductores con licencia vigente para entregas en la ciudad. Vehículo proporcionado. Flexibilidad horaria.</p>
+                    <div class="vacante-details">
+                        <span class="salary">💰 1.5 a 2.5 salarios mínimos + bonificación</span>
+                        <span class="location">📍 Múltiples ciudades</span>
+                        <span class="experience">👥 Experiencia mínima: 1 año</span>
+                    </div>
+                    <button class="btn-aplicar">Ver Detalles</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Banco de Empleos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.btn-buscar').addEventListener('click', function() {
+            const busqueda = document.getElementById('buscar-empleo').value.toLowerCase();
+            const categoria = document.getElementById('filtro-categoria').value;
+            const salario = document.getElementById('filtro-salario').value;
+            
+            const vacantes = document.querySelectorAll('.vacante-card');
+            
+            vacantes.forEach(vacante => {
+                const titulo = vacante.querySelector('h3').textContent.toLowerCase();
+                const descripcion = vacante.querySelector('.descripcion').textContent.toLowerCase();
+                const empresa = vacante.querySelector('.empresa').textContent.toLowerCase();
+                
+                const coincideBusqueda = titulo.includes(busqueda) || descripcion.includes(busqueda) || empresa.includes(busqueda) || busqueda === '';
+                
+                if (coincideBusqueda) {
+                    vacante.style.display = 'block';
+                } else {
+                    vacante.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('buscar-empleo').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.btn-buscar').click();
+            }
+        });
+    </script>
+</body>
+</html>

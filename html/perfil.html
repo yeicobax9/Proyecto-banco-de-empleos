@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Banco de Empleos</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="inicio.html"><img src="../img/Logo2.png" alt="Logo"></a>
+            </div>
+            <div class="user-nav">
+                <a href="inicio.html" class="btn-back">← Volver</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <!-- Sidebar -->
+            <aside class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar-large">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="#7CB342">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-8 3-8 3v6h16v-6s-2-3-8-3z"/>
+                        </svg>
+                    </div>
+                    <h2 id="profileName">Juan Pérez</h2>
+                    <p id="profileEmail" class="profile-email">juan@ejemplo.com</p>
+                    <div class="profile-status">
+                        <span class="status-badge active">Perfil Activo</span>
+                    </div>
+                    <button class="btn-edit-profile">Editar Perfil</button>
+                </div>
+
+                <nav class="profile-nav">
+                    <a href="#general" class="nav-item active" data-section="general">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Información General
+                    </a>
+                    <a href="#experiencia" class="nav-item" data-section="experiencia">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 3h-3V1h-2v2H8"></path>
+                        </svg>
+                        Experiencia
+                    </a>
+                    <a href="#educacion" class="nav-item" data-section="educacion">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6m0 0l-10 5-10-5m0 0V8m0 0l10-5 10 5"></path>
+                        </svg>
+                        Educación
+                    </a>
+                    <a href="#habilidades" class="nav-item" data-section="habilidades">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l0 10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12l0-10L12 2"></path>
+                        </svg>
+                        Habilidades
+                    </a>
+                    <a href="#preferencias" class="nav-item" data-section="preferencias">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6m-17.78 7.78l4.24-4.24m3.08-3.08l4.24-4.24"></path>
+                        </svg>
+                        Preferencias
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Contenido Principal -->
+            <section class="profile-content">
+                <!-- Información General -->
+                <div class="section-content active" id="section-general">
+                    <h3>Información General</h3>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <label>Nombre Completo</label>
+                            <p>Juan Pérez García</p>
+                        </div>
+                        <div class="info-card">
+                            <label>Email</label>
+                            <p>juan@ejemplo.com</p>
+                        </div>
+                        <div class="info-card">
+                            <label>Teléfono</label>
+                            <p>+57 300 123 4567</p>
+                        </div>
+                        <div class="info-card">
+                            <label>Ubicación</label>
+                            <p>Bogotá, Colombia</p>
+                        </div>
+                        <div class="info-card">
+                            <label>Documento</label>
+                            <p>1234567890</p>
+                        </div>
+                        <div class="info-card">
+                            <label>Fecha de Registro</label>
+                            <p>15 de Enero, 2026</p>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Editar Información</button>
+                </div>
+
+                <!-- Experiencia -->
+                <div class="section-content" id="section-experiencia">
+                    <h3>Experiencia Laboral</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Especialista en Ventas</h4>
+                                <p class="company">TechCorp Solutions</p>
+                                <p class="date">Enero 2024 - Presente</p>
+                                <p class="description">Responsable de gestionar cuentas de clientes corporativos y aumentar las ventas en la región. He logrado un crecimiento del 35% en los últimos 6 meses.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Ejecutivo de Atención al Cliente</h4>
+                                <p class="company">GlobalTech Services</p>
+                                <p class="date">Junio 2023 - Diciembre 2023</p>
+                                <p class="description">Atendía consultas de clientes, resolvía problemas técnicos y garantizaba la satisfacción del usuario final.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Agregar Experiencia</button>
+                </div>
+
+                <!-- Educación -->
+                <div class="section-content" id="section-educacion">
+                    <h3>Educación</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Licenciatura en Administración de Empresas</h4>
+                                <p class="company">Universidad Nacional de Colombia</p>
+                                <p class="date">2019 - 2023</p>
+                                <p class="description">Graduado con honores. Promedio de calificación: 4.2/5.0</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Técnico en Servicio al Cliente</h4>
+                                <p class="company">SENA</p>
+                                <p class="date">2018 - 2019</p>
+                                <p class="description">Certificación en habilidades de atención al cliente y resolución de conflictos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Agregar Educación</button>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="section-content" id="section-habilidades">
+                    <h3>Habilidades</h3>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Liderazgo</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Comunicación</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Negociación</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Análisis de Datos</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microsoft Office</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Gestión de Proyectos</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 72%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Agregar Habilidad</button>
+                </div>
+
+                <!-- Preferencias -->
+                <div class="section-content" id="section-preferencias">
+                    <h3>Preferencias de Empleo</h3>
+                    <div class="preferences-form">
+                        <div class="form-group">
+                            <label>Tipos de Empleo Deseados</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Tiempo Completo</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>Medio Tiempo</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>Contrato</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>Remoto</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Salario Esperado (Mensual)</label>
+                            <input type="text" placeholder="$1.500.000 - $3.000.000" value="$1.500.000 - $3.000.000">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ciudades de Interés</label>
+                            <div class="tag-input">
+                                <span class="tag">Bogotá <button>×</button></span>
+                                <span class="tag">Medellín <button>×</button></span>
+                                <span class="tag">Cali <button>×</button></span>
+                                <input type="text" placeholder="Agregar ciudad...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Notificaciones de Empleos</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="notificationsToggle" checked>
+                                <label for="notificationsToggle"></label>
+                            </div>
+                            <p class="hint">Recibe alertas sobre nuevas ofertas que coincidan con tu perfil</p>
+                        </div>
+
+                        <button class="btn-primary">Guardar Preferencias</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Banco de Empleos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cargar datos del usuario desde localStorage
+        function loadUserData() {
+            const userData = {
+                name: 'Juan Pérez',
+                email: 'juan@ejemplo.com'
+            };
+            
+            document.getElementById('profileName').textContent = userData.name;
+            document.getElementById('profileEmail').textContent = userData.email;
+        }
+
+        // Navegación entre secciones
+        const navItems = document.querySelectorAll('.profile-nav .nav-item');
+        const sections = document.querySelectorAll('.section-content');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = item.dataset.section;
+
+                // Remover activo de todos los items
+                navItems.forEach(nav => nav.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Agregar activo al item clickeado
+                item.classList.add('active');
+                document.getElementById(`section-${sectionId}`).classList.add('active');
+            });
+        });
+
+        // Botones de edición
+        document.querySelector('.btn-edit-profile').addEventListener('click', () => {
+            alert('Abrirá modal de edición de perfil');
+        });
+
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const sectionTitle = this.parentElement.querySelector('h3').textContent;
+                alert(`Funcionalidad para: ${sectionTitle}`);
+            });
+        });
+
+        // Cargar datos
+        document.addEventListener('DOMContentLoaded', loadUserData);
+    </script>
+</body>
+</html>

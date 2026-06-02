@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="../css/cuenta.css">
+</head>
+<body>
+    <header>
+        <img src="../img/Logo2.png" alt="Logo">
+    </header>
+
+    <section id="tipo-registro-section">
+        <hr>
+        <h2>¿Cómo deseas registrarte?</h2>
+        <p>Selecciona el tipo de cuenta que necesitas</p>
+        <div class="tipo-registro-buttons">
+            <button class="tipo-btn" id="btn-usuario" onclick="seleccionarTipo('usuario')">
+                👤 Registrarse como Usuario
+            </button>
+            <button class="tipo-btn" id="btn-empresa" onclick="seleccionarTipo('empresa')">
+                🏢 Registrarse como Empresa
+            </button>
+        </div>
+    </section>
+
+    <section id="formulario-section" style="display: none;">
+        <hr>
+        <div class="form-header">
+            <button class="btn-back" onclick="volverAtras()">← Atrás</button>
+            <h2 id="titulo-formulario">Crear Cuenta</h2>
+        </div>
+        <form action="#" method="POST">
+            <input type="hidden" id="tipo-usuario" name="tipo-usuario" value="">
+            
+            <label for="usuario">Nombre de usuario:</label>
+            <input required type="text" id="usuario" name="usuario" placeholder="Ingresa un usuario único"> 
+            
+            <label for="email">Correo electrónico:</label>
+            <input required type="email" id="email" name="email" placeholder="ejemplo@email.com"> 
+            
+            <label for="contraseña">Contraseña:</label>
+            <input required type="password" id="contraseña" name="contraseña" placeholder="Mínimo 8 caracteres"> 
+            
+            <label for="confirmar-contraseña">Confirma la contraseña:</label>
+            <input required type="password" id="confirmar-contraseña" name="confirmar-contraseña" placeholder="Repite tu contraseña"> 
+            
+            <div id="campos-usuario" style="display: none;">
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero">
+                    <option value="">Selecciona una opción</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            
+            <div id="campos-empresa" style="display: none;">
+                <label for="nombre-empresa">Nombre de la Empresa:</label>
+                <input required type="text" id="nombre-empresa" name="nombre-empresa" placeholder="Nombre legal de tu empresa">
+                
+                <label for="nit">NIT (Número de Identificación Tributaria):</label>
+                <input required type="text" id="nit" name="nit" placeholder="NIT de tu empresa">
+                
+                <label for="telefono">Teléfono:</label>
+                <input required type="tel" id="telefono" name="telefono" placeholder="+57 (XXX) XXX-XXXX">
+            </div>
+            
+            <button type="submit">Crear Cuenta</button>
+        </form>
+    </section>
+
+    <script>
+        function seleccionarTipo(tipo) {
+            document.getElementById('tipo-usuario').value = tipo;
+            document.getElementById('tipo-registro-section').style.display = 'none';
+            document.getElementById('formulario-section').style.display = 'block';
+            
+            if (tipo === 'usuario') {
+                document.getElementById('titulo-formulario').textContent = 'Crear Cuenta de Usuario';
+                document.getElementById('campos-usuario').style.display = 'block';
+                document.getElementById('campos-empresa').style.display = 'none';
+                document.getElementById('genero').required = true;
+            } else if (tipo === 'empresa') {
+                document.getElementById('titulo-formulario').textContent = 'Crear Cuenta de Empresa';
+                document.getElementById('campos-usuario').style.display = 'none';
+                document.getElementById('campos-empresa').style.display = 'block';
+                document.getElementById('nombre-empresa').required = true;
+                document.getElementById('nit').required = true;
+                document.getElementById('telefono').required = true;
+            }
+        }
+        
+        function volverAtras() {
+            document.getElementById('tipo-registro-section').style.display = 'block';
+            document.getElementById('formulario-section').style.display = 'none';
+        }
+    </script>
+</body>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/Logo2.png" alt="Logo">
+    </header>
+
+    <section id="tipo-login-section">
+        <hr>
+        <h2>¿Cómo deseas iniciar sesión?</h2>
+        <p>Selecciona el tipo de cuenta</p>
+        <div class="tipo-login-buttons">
+            <button class="tipo-btn" onclick="seleccionarTipo('usuario')">
+                👤 Iniciar Sesión como Usuario
+            </button>
+            <button class="tipo-btn" onclick="seleccionarTipo('empresa')">
+                🏢 Iniciar Sesión como Empresa
+            </button>
+        </div>
+    </section>
+
+    <section id="formulario-section" style="display: none;">
+        <hr>
+        <div class="form-header">
+            <button class="btn-back" onclick="volverAtras()">← Atrás</button>
+            <h2 id="titulo-formulario">Iniciar Sesión</h2>
+        </div>
+        <form action="#" method="POST">
+            <input type="hidden" id="tipo-login" name="tipo-login" value="">
+            
+            <div id="campos-usuario-login">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required> 
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required> 
+            </div>
+            
+            <div id="campos-empresa-login" style="display: none;">
+                <label for="nit-login">NIT (Número de Identificación Tributaria):</label>
+                <input type="text" id="nit-login" name="nit-login" placeholder="NIT de tu empresa" required> 
+                <label for="contraseña-empresa">Contraseña:</label>
+                <input type="password" id="contraseña-empresa" name="contraseña-empresa" placeholder="Ingresa tu contraseña" required> 
+            </div>
+            
+            <button type="submit">Ingresar</button>
+        </form>
+    </section>
+    
+    <section id="seccion-ayuda" style="display: none;">
+        <p>¿Olvidaste la contraseña?</p>
+        <button><a href="OC.html">Restaurar Contraseña</a></button>
+    </section>
+
+    <section id="seccion-registro" style="display: none;">
+        <p>¿No tienes cuenta? Crea una:</p>
+        <button><a href="crear-cuenta.html">Crear Cuenta</a></button>
+    </section>
+
+    <script>
+        function seleccionarTipo(tipo) {
+            document.getElementById('tipo-login').value = tipo;
+            document.getElementById('tipo-login-section').style.display = 'none';
+            document.getElementById('formulario-section').style.display = 'block';
+            document.getElementById('seccion-ayuda').style.display = 'block';
+            document.getElementById('seccion-registro').style.display = 'block';
+            
+            if (tipo === 'usuario') {
+                document.getElementById('titulo-formulario').textContent = 'Iniciar Sesión';
+                document.getElementById('campos-usuario-login').style.display = 'block';
+                document.getElementById('campos-empresa-login').style.display = 'none';
+            } else if (tipo === 'empresa') {
+                document.getElementById('titulo-formulario').textContent = 'Iniciar Sesión - Empresa';
+                document.getElementById('campos-usuario-login').style.display = 'none';
+                document.getElementById('campos-empresa-login').style.display = 'block';
+            }
+        }
+        
+        function volverAtras() {
+            document.getElementById('tipo-login-section').style.display = 'block';
+            document.getElementById('formulario-section').style.display = 'none';
+            document.getElementById('seccion-ayuda').style.display = 'none';
+            document.getElementById('seccion-registro').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

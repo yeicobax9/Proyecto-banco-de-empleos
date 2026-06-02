@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A8D5BA 0%, #F5F5DC 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Header y Navegación */
+header {
+    background-color: transparent;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header img {
+    height: auto;
+    max-width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li img {
+    height: auto;
+    max-width: 100px;
+}
+
+nav button {
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #558B2F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Secciones principales */
+section {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+section hr {
+    border: none;
+    height: 2px;
+    background-color: #7CB342;
+    margin: 8px 0;
+}
+
+/* Formulario */
+form {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    margin: 10px 0;
+}
+
+form h2 {
+    color: #558B2F;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+form p {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: #558B2F;
+    font-weight: 600;
+    text-align: left;
+    font-size: 13px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #E8D7C3;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #7CB342;
+    box-shadow: 0 0 8px rgba(124, 179, 66, 0.3);
+    background-color: #FFFEF9;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+form button:hover {
+    background-color: #558B2F;
+    box-shadow: 0 6px 15px rgba(124, 179, 66, 0.4);
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Secciones de ayuda */
+section p {
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+section button {
+    background-color: #A8D5BA;
+    color: #333;
+    border: 2px solid #7CB342;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px 3px;
+}
+
+section button:hover {
+    background-color: #7CB342;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+}
+
+section button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form {
+        padding: 30px 20px;
+    }
+
+    section {
+        margin: 20px auto;
+    }
+}

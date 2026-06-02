@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A8D5BA 0%, #F5F5DC 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    height: auto;
+    max-width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-links a:hover {
+    background-color: #A8D5BA;
+    color: #558B2F;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.auth-buttons button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background-color: #A8D5BA;
+    color: #333;
+    border: 2px solid #7CB342;
+}
+
+.btn-login:hover {
+    background-color: #7CB342;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-register {
+    background-color: #7CB342;
+    color: white;
+    border: none;
+}
+
+.btn-register:hover {
+    background-color: #558B2F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main */
+main {
+    flex: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    color: #558B2F;
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Búsqueda y Filtros */
+.busqueda-section {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #E8D7C3;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #7CB342;
+    box-shadow: 0 0 8px rgba(124, 179, 66, 0.3);
+    background-color: #FFFEF9;
+}
+
+.btn-buscar {
+    padding: 12px 30px;
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background-color: #558B2F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filtro-select {
+    padding: 10px 15px;
+    border: 2px solid #E8D7C3;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filtro-select:focus {
+    outline: none;
+    border-color: #7CB342;
+    box-shadow: 0 0 8px rgba(124, 179, 66, 0.3);
+}
+
+/* Vacantes Grid */
+.vacantes-section {
+    margin-top: 30px;
+}
+
+.vacantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.vacante-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.vacante-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(124, 179, 66, 0.2);
+}
+
+.vacante-header {
+    margin-bottom: 15px;
+}
+
+.vacante-header h3 {
+    color: #558B2F;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.empresa {
+    color: #7CB342;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.descripcion {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.vacante-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #555;
+}
+
+.vacante-details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-aplicar {
+    background-color: #7CB342;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-aplicar:hover {
+    background-color: #558B2F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #558B2F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .auth-buttons {
+        order: 2;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .busqueda-section {
+        padding: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtro-select {
+        width: 100%;
+    }
+
+    .vacantes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+}
