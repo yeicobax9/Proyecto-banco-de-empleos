@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Empleos - Panel de Gestión</title>
+    <link rel="stylesheet" href="styles_empresarial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span>Banco de Empleos</span>
+            </div>
+            <div class="navbar-menu">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    Panel Principal
+                </a>
+                <a href="#" class="nav-item" data-section="vacantes">
+                    Mis Vacantes
+                </a>
+                <a href="#" class="nav-item" data-section="candidatos">
+                    Candidatos
+                </a>
+                <a href="#" class="nav-item" data-section="perfil">
+                    Mi Perfil
+                </a>
+            </div>
+            <div class="navbar-user">
+                <div class="user-info">
+                    <span class="user-name">Banco de Empleos</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="btn-logout">
+                    Salir
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <div class="menu-section">
+                <h3>Herramientas</h3>
+                <ul>
+                    <li><a href="#" data-section="dashboard">Inicio</a></li>
+                    <li><a href="#" data-section="nueva-vacante">Nueva Vacante</a></li>
+                    <li><a href="#" data-section="mis-vacantes">Mis Vacantes</a></li>
+                    <li><a href="#" data-section="candidatos">Candidatos</a></li>
+                    <li><a href="#" data-section="reportes">Reportes</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>Configuración</h3>
+                <ul>
+                    <li><a href="#" data-section="perfil">Datos de la Empresa</a></li>
+                    <li><a href="#" data-section="usuarios">Usuarios</a></li>
+                    <li><a href="#" data-section="planes">Plan de Pago</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section id="dashboard" class="section active">
+            <div class="section-header">
+                <h1>Panel Principal</h1>
+                <p>Bienvenido. Aquí está todo lo que necesitas saber sobre tus vacantes</p>
+            </div>
+
+            <div class="welcome-banner">
+                <div class="welcome-content">
+                    <h2>Bienvenido a Banco de Empleos</h2>
+                    <p>Esta es tu interfaz para gestionar todas las vacantes. Aquí puedes publicar empleos, revisar candidatos y administrar tu equipo de forma fácil y rápida.</p>
+                    <div class="welcome-features">
+                        <div class="feature-item">
+                            <span class="feature-icon"></span>
+                            <span>Publica nuevas vacantes</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"></span>
+                            <span>Visualiza estadísticas</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"></span>
+                            <span>Gestiona candidatos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon vacantes">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Vacantes Activas</h3>
+                        <p class="stat-number">12</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon candidatos">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Candidatos Recibidos</h3>
+                        <p class="stat-number">145</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon entrevistas">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Entrevistas Pendientes</h3>
+                        <p class="stat-number">8</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon ciertas">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Posiciones Cubiertas</h3>
+                        <p class="stat-number">28</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h2>Vacantes Recientes</h2>
+                    <div class="vacante-item">
+                        <h4>Desarrollador Full Stack</h4>
+                        <p>Publicada hace 3 días</p>
+                        <div class="vacante-stats">
+                            <span>12 candidatos interesados</span>
+                            <span class="badge-active">Activa</span>
+                        </div>
+                    </div>
+                    <div class="vacante-item">
+                        <h4>Analista de Sistemas</h4>
+                        <p>Publicada hace 7 días</p>
+                        <div class="vacante-stats">
+                            <span>28 candidatos interesados</span>
+                            <span class="badge-active">Activa</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-link">Ver todas las vacantes </a>
+                </div>
+
+                <div class="card">
+                    <h2>Actividad Reciente</h2>
+                    <div class="activity-item">
+                        <span class="activity-icon"></span>
+                        <div class="activity-content">
+                            <p><strong>Juan Pérez</strong> envió su CV</p>
+                            <small>Hace 2 horas</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon"></span>
+                        <div class="activity-content">
+                            <p>Vacante <strong>"Contador"</strong> ya fue cubierta</p>
+                            <small>Hace 1 día</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon"></span>
+                        <div class="activity-content">
+                            <p>Nueva aplicación recibida</p>
+                            <small>Hace 2 días</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nueva-vacante" class="section">
+            <div class="section-header">
+                <h1>Publicar Nueva Vacante</h1>
+                <p>Completa el formulario para crear una nueva oportunidad de empleo</p>
+            </div>
+
+            <div class="card form-container">
+                <form id="formularioVacante" class="form">
+                    <div class="form-group">
+                        <label for="puesto">¿Qué puesto deseas publicar? *</label>
+                        <input type="text" id="puesto" name="puesto" placeholder="Ej: Desarrollador Senior" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departamento">Departamento o Área *</label>
+                            <select id="departamento" name="departamento" required>
+                                <option value="">Selecciona un departamento</option>
+                                <option value="it">Tecnología</option>
+                                <option value="rh">Recursos Humanos</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="contabilidad">Contabilidad</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ubicacion">¿Dónde? *</label>
+                            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad, País" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="salario_min">Salario Inicial *</label>
+                            <input type="number" id="salario_min" name="salario_min" placeholder="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="salario_max">Salario Máximo *</label>
+                            <input type="number" id="salario_max" name="salario_max" placeholder="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo_contrato">Tipo de Contrato *</label>
+                            <select id="tipo_contrato" name="tipo_contrato" required>
+                                <option value="">Selecciona tipo</option>
+                                <option value="tiempo_completo">Tiempo Completo</option>
+                                <option value="medio_tiempo">Medio Tiempo</option>
+                                <option value="temporal">Temporal</option>
+                                <option value="freelance">Freelance</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Cuéntanos más sobre el puesto *</label>
+                        <textarea id="descripcion" name="descripcion" placeholder="Describe el puesto, responsabilidades y por qué es una oportunidad asombrosa..." rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Requisitos Principales</h3>
+                        <div id="requisitos-list">
+                            <div class="requisito-item">
+                                <input type="text" placeholder="Ej: 3 años de experiencia en..." class="requisito-input">
+                                <button type="button" class="btn-remove-requisito" onclick="removerRequisito(this)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-field" onclick="agregarRequisito()">
+                            <i class="fas fa-plus"></i> Añadir Requisito
+                        </button>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Funciones Principales</h3>
+                        <div id="funciones-list">
+                            <div class="funcion-item">
+                                <input type="text" placeholder="Ej: Desarrollar módulos..." class="funcion-input">
+                                <button type="button" class="btn-remove-funcion" onclick="removerFuncion(this)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-field" onclick="agregarFuncion()">
+                            <i class="fas fa-plus"></i> Añadir Función
+                        </button>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Ventajas y Beneficios</h3>
+                        <div id="beneficios-list">
+                            <div class="beneficio-item">
+                                <input type="text" placeholder="Ej: Seguro médico..." class="beneficio-input">
+                                <button type="button" class="btn-remove-beneficio" onclick="removerBeneficio(this)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-field" onclick="agregarBeneficio()">
+                            <i class="fas fa-plus"></i> Añadir Beneficio
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_cierre">¿Hasta cuándo recibirás aplicaciones?</label>
+                        <input type="date" id="fecha_cierre" name="fecha_cierre">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Publicar Vacante
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Limpiar
+                        </button>
+                    </div>
+                        <div class="form-group">
+                            <label for="salario_max">Salario máximo *</label>
+                            <input type="number" id="salario_max" name="salario_max" placeholder="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo_contrato">Tipo de Contrato *</label>
+                            <select id="tipo_contrato" name="tipo_contrato" required>
+                                <option value="">Selecciona tipo</option>
+                                <option value="tiempo_completo">Tiempo Completo</option>
+                                <option value="medio_tiempo">Medio Tiempo</option>
+                                <option value="temporal">Temporal</option>
+                                <option value="freelance">Freelance</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción del Puesto *</label>
+                        <textarea id="descripcion" name="descripcion" placeholder="Describe el puesto, responsabilidades y funciones" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Requisitos Principales</h3>
+                        <div id="requisitos-list">
+                            <div class="requisito-item">
+                                <input type="text" placeholder="Ej: 3 años de experiencia en..." class="requisito-input">
+                                <button type="button" class="btn-remove-requisito" onclick="removerRequisito(this)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-field" onclick="agregarRequisito()">
+                            <i class="fas fa-plus"></i> Agregar Requisito
+                        </button>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Funciones Principales</h3>
+                        <div id="funciones-list">
+                            <div class="funcion-item">
+                                <input type="text" placeholder="Ej: Desarrollar módulos..." class="funcion-input">
+                                <button type="button" class="btn-remove-funcion" onclick="removerFuncion(this)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-field" onclick="agregarFuncion()">
+                            <i class="fas fa-plus"></i> Agregar Función
+                        </button>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Ventajas y Beneficios</h3>
+                        <div id="beneficios-list">
+                            <div class="beneficio-item">
+                                <input type="text" placeholder="Ej: Seguro médico..." class="beneficio-input">
+                                <button type="button" class="btn-remove-beneficio" onclick="removerBeneficio(this)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-field" onclick="agregarBeneficio()">
+                            <i class="fas fa-plus"></i> Agregar Beneficio
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_cierre">Fecha de cierre de aplicaciones</label>
+                        <input type="date" id="fecha_cierre" name="fecha_cierre">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Publicar Vacante
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Limpiar Formulario
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="mis-vacantes" class="section">
+            <div class="section-header">
+                <h1>Mis Vacantes</h1>
+                <a href="#" data-section="nueva-vacante" class="btn btn-primary">
+                    Nueva Vacante
+                </a>
+            </div>
+
+            <div class="filter-bar">
+                <input type="text" id="searchVacantes" placeholder="Busca por puesto...">
+                <select id="filterEstado">
+                    <option value="">Todos los estados</option>
+                    <option value="activa">Activa</option>
+                    <option value="pausada">Pausada</option>
+                    <option value="cerrada">Cerrada</option>
+                </select>
+            </div>
+
+            <div class="vacantes-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Puesto</th>
+                            <th>Fecha Publicación</th>
+                            <th>Candidatos</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Desarrollador Full Stack</strong></td>
+                            <td>15/02/2026</td>
+                            <td><span class="badge">12</span></td>
+                            <td><span class="status-badge activa">Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-accion" title="Ver"><i class="fas fa-eye"></i></button>
+                                <button class="btn-accion" title="Editar"><i class="fas fa-edit"></i></button>
+                                <button class="btn-accion" title="Ver candidatos"><i class="fas fa-users"></i></button>
+                                <button class="btn-accion eliminar" title="Eliminar"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analista de Sistemas</strong></td>
+                            <td>10/02/2026</td>
+                            <td><span class="badge">28</span></td>
+                            <td><span class="status-badge activa">Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-accion" title="Ver"><i class="fas fa-eye"></i></button>
+                                <button class="btn-accion" title="Editar"><i class="fas fa-edit"></i></button>
+                                <button class="btn-accion" title="Ver candidatos"><i class="fas fa-users"></i></button>
+                                <button class="btn-accion eliminar" title="Eliminar"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contador Senior</strong></td>
+                            <td>05/02/2026</td>
+                            <td><span class="badge">15</span></td>
+                            <td><span class="status-badge cerrada">Cerrada</span></td>
+                            <td class="acciones">
+                                <button class="btn-accion" title="Ver"><i class="fas fa-eye"></i></button>
+                                <button class="btn-accion" title="Editar"><i class="fas fa-edit"></i></button>
+                                <button class="btn-accion" title="Ver candidatos"><i class="fas fa-users"></i></button>
+                                <button class="btn-accion eliminar" title="Eliminar"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="candidatos" class="section">
+            <div class="section-header">
+                <h1>Candidatos</h1>
+                <p>Aquí están todos los que quieren trabajar contigo</p>
+            </div>
+
+            <div class="filter-bar">
+                <input type="text" id="searchCandidatos" placeholder="Busca candidatos...">
+                <select id="filterVacante">
+                    <option value="">Todas las vacantes</option>
+                    <option value="1">Desarrollador Full Stack</option>
+                    <option value="2">Analista de Sistemas</option>
+                    <option value="3">Contador Senior</option>
+                </select>
+                <select id="filterEtapa">
+                    <option value="">📍 Todas las etapas</option>
+                    <option value="nuevo">Nuevo</option>
+                    <option value="revisando">👀 Revisando</option>
+                    <option value="entrevista">En Entrevista</option>
+                    <option value="rechazado">❌ Rechazado</option>
+                </select>
+            </div>
+
+            <div class="candidatos-list">
+                <div class="candidato-card">
+                    <div class="candidato-header">
+                        <div class="candidato-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="candidato-info">
+                            <h4>Carlos Mendoza</h4>
+                            <p>carlos.mendoza@email.com | +1 234 567 890</p>
+                            <p class="puesto-aplicado">Desarrollador Full Stack</p>
+                        </div>
+                        <div class="candidato-etapa">
+                            <span class="badge etapa-nuevo">Nuevo</span>
+                        </div>
+                    </div>
+                    <div class="candidato-actions">
+                        <button class="btn btn-small btn-secondary">Ver CV</button>
+                        <button class="btn btn-small btn-primary">Agendar Entrevista</button>
+                        <button class="btn btn-small btn-danger">Rechazar</button>
+                    </div>
+                </div>
+
+                <div class="candidato-card">
+                    <div class="candidato-header">
+                        <div class="candidato-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="candidato-info">
+                            <h4>María García</h4>
+                            <p>maria.garcia@email.com | +1 345 678 901</p>
+                            <p class="puesto-aplicado">Analista de Sistemas</p>
+                        </div>
+                        <div class="candidato-etapa">
+                            <span class="badge etapa-entrevista">En Entrevista</span>
+                        </div>
+                    </div>
+                    <div class="candidato-actions">
+                        <button class="btn btn-small btn-secondary">Ver CV</button>
+                        <button class="btn btn-small btn-primary">Cambiar Estado</button>
+                        <button class="btn btn-small btn-danger">Rechazar</button>
+                    </div>
+                </div>
+
+                <div class="candidato-card">
+                    <div class="candidato-header">
+                        <div class="candidato-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="candidato-info">
+                            <h4>Juan Rodríguez</h4>
+                            <p>juan.rodriguez@email.com | +1 456 789 012</p>
+                            <p class="puesto-aplicado">Desarrollador Full Stack</p>
+                        </div>
+                        <div class="candidato-etapa">
+                            <span class="badge etapa-revisando">Revisando</span>
+                        </div>
+                    </div>
+                    <div class="candidato-actions">
+                        <button class="btn btn-small btn-secondary">Ver CV</button>
+                        <button class="btn btn-small btn-primary">Agendar Entrevista</button>
+                        <button class="btn btn-small btn-danger">Rechazar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfil" class="section">
+            <div class="section-header">
+                <h1>Mi Perfil Empresarial</h1>
+                <p>Actualiza los datos de tu empresa</p>
+            </div>
+
+            <div class="card form-container">
+                <form id="formularioperfil" class="form">
+                    <h2>Información de la Empresa</h2>
+
+                    <div class="form-group">
+                        <label for="nombre_empresa">Nombre de la Empresa *</label>
+                        <input type="text" id="nombre_empresa" value="Banco de Empleos" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rfc">RFC/NIT *</label>
+                            <input type="text" id="rfc" value="ABC123456XYZ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sector">Sector Industrial *</label>
+                            <select id="sector" required>
+                                <option value="tecnologia">Tecnología</option>
+                                <option value="finanzas">Finanzas</option>
+                                <option value="manufactura">Manufactura</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="empleados">Cantidad de Empleados *</label>
+                            <input type="number" id="empleados" value="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sitio_web">Sitio Web</label>
+                            <input type="url" id="sitio_web" placeholder="https://ejemplo.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion_empresa">Descripción de la Empresa</label>
+                        <textarea id="descripcion_empresa" rows="5" placeholder="Describe tu empresa..."></textarea>
+                    </div>
+
+                    <h2>Contacto Principal</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contacto_nombre">Nombre Completo *</label>
+                            <input type="text" id="contacto_nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contacto_email">Email *</label>
+                            <input type="email" id="contacto_email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contacto_telefono">Teléfono *</label>
+                            <input type="tel" id="contacto_telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contacto_puesto">Puesto *</label>
+                            <input type="text" id="contacto_puesto" required>
+                        </div>
+                    </div>
+
+                    <h2>Ubicación</h2>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección *</label>
+                        <input type="text" id="direccion" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad *</label>
+                            <input type="text" id="ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pais">País *</label>
+                            <input type="text" id="pais" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Guardar Cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script_empresarial.js"></script>
+</body>
+</html>
