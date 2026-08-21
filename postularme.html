@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postularme | Banco de Empleos</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/postularme.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-postularme">
+
+  <nav>
+    <a href="index.html" class="logo" aria-label="Ir al inicio">
+      <div class="logo-stamp">Emp</div>
+      Banco de Empleos
+    </a>
+    <ul class="nav-links">
+      <li><a href="empleos.html">Empleos</a></li>
+      <li><a href="index.html#categorias">Categorías</a></li>
+      <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-cta">Ingresar</a>
+      <a href="registro.html" class="btn-outline">Registrarse</a>
+    </div>
+  </nav>
+
+  <header class="apply-hero cork-bg">
+    <div class="hero-inner">
+      <div class="crumbs">
+        <a href="empleos.html">Empleos</a>
+        <span>/</span>
+        <a href="empleo1.html">Desarrollador Frontend</a>
+      </div>
+      <span class="hero-eyebrow">🚀 Postulación</span>
+      <h1>Aplicar a la oferta de <em>Desarrollador Frontend</em></h1>
+      <p class="lede">Completa tus datos y comparte tu perfil para que el equipo de TekNova pueda revisar tu candidatura.</p>
+    </div>
+  </header>
+
+  <main class="apply-page">
+    <div class="apply-layout">
+      <section class="apply-form-wrap">
+        <div class="form-card">
+          <h2>Formulario de postulación</h2>
+          <form class="apply-form">
+            <div class="form-row two-col">
+              <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" type="text" placeholder="Tu nombre completo">
+              </div>
+              <div class="field">
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" placeholder="tucorreo@ejemplo.com">
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" type="tel" placeholder="+57 300 000 0000">
+              </div>
+              <div class="field">
+                <label for="ciudad">Ciudad</label>
+                <input id="ciudad" type="text" placeholder="Medellín">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="linkedin">LinkedIn o portafolio</label>
+              <input id="linkedin" type="url" placeholder="https://linkedin.com/in/tu-perfil">
+            </div>
+
+            <div class="field">
+              <label for="experiencia">Experiencia relevante</label>
+              <textarea id="experiencia" rows="5" placeholder="Cuenta un poco de tu experiencia, proyectos importantes y tecnologías que dominas..."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="cv">Adjuntar CV</label>
+              <input id="cv" type="file">
+            </div>
+
+            <div class="field checkbox-row">
+              <input id="acepto" type="checkbox">
+              <label for="acepto">Acepto que mi información sea revisada por el equipo de contratación.</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar postulación</button>
+          </form>
+        </div>
+      </section>
+
+      <aside class="apply-sidebar">
+        <div class="sidebar-card">
+          <span class="mini-tag">Vacante</span>
+          <h3>Desarrollador Frontend</h3>
+          <p>TekNova · Medellín · Híbrido · Tiempo completo</p>
+          <div class="salary-box">$3.500.000 – $5.000.000</div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Lo que buscamos</h3>
+          <ul class="mini-list">
+            <li>React y JavaScript moderno</li>
+            <li>Diseño responsive y accesible</li>
+            <li>Experiencia de usuario</li>
+            <li>Trabajo en equipo con metodologías ágiles</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Contacto rápido</h3>
+          <ul class="contact-list">
+            <li><span>Email</span><strong>talento@teknova.com</strong></li>
+            <li><span>Teléfono</span><strong>+57 300 111 2233</strong></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-stamp">Emp</div>
+          Banco de Empleos
+        </div>
+        <p>Conectamos personas con oportunidades de trabajo reales, claras y con propósito.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="empleos.html">Empleos</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="login.html">Ingresar</a></li>
+          <li><a href="registro.html">Registrarse</a></li>
+          <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boletín</h4>
+        <div class="news-card">
+          <h4>Recibe oportunidades</h4>
+          <div class="news-row">
+            <input type="email" placeholder="Tu correo">
+            <button type="button">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <p>© 2026 Banco de Empleos</p>
+      <p>Hecho con propósito para conectar talento y oportunidades.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

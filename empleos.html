@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleos | Banco de Empleos</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/empleos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-empleos">
+
+  <nav>
+    <a href="index.html" class="logo" aria-label="Ir al inicio">
+      <div class="logo-stamp">Emp</div>
+      Banco de Empleos
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#empleos">Buscar empleo</a></li>
+      <li><a href="index.html#categorias">Categorías</a></li>
+      <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+      <li><a href="index.html#empresas">Empresas</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-cta">Ingresar</a>
+      <a href="registro.html" class="btn-outline">Registrarse</a>
+    </div>
+  </nav>
+
+  <header class="empleos-hero cork-bg">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">📌 Vacantes disponibles</span>
+      <h1>Encuentra la oportunidad <em>ideal</em> para tu próximo paso.</h1>
+      <p class="lede">Explora ofertas reales, por ciudad, categoría o modalidad. Aquí encuentras oportunidades diseñadas para conectar talento y crecimiento.</p>
+
+      <div class="hero-stats">
+        <div class="stat-chip"><b>1.240</b> vacantes activas</div>
+        <div class="stat-chip"><b>380</b> empresas activas</div>
+        <div class="stat-chip"><b>92%</b> de respuesta</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="job-board">
+    <div class="job-toolbar">
+      <h2>Empleos disponibles</h2>
+      <div class="toolbar-actions">
+        <button class="chip active" type="button">Todos</button>
+        <button class="chip" type="button">Tiempo completo</button>
+        <button class="chip" type="button">Híbrido</button>
+        <button class="chip" type="button">Remoto</button>
+      </div>
+    </div>
+
+    <div class="jobs-layout">
+      <aside class="job-sidebar">
+        <div class="filter-box">
+          <h3>Filtrar por</h3>
+          <div class="filter-group">
+            <div class="filter-field">
+              <label for="categoria">Categoría</label>
+              <select id="categoria">
+                <option>Todas</option>
+                <option>Tecnología</option>
+                <option>Diseño</option>
+                <option>Administración</option>
+                <option>Logística</option>
+                <option>Salud</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="ciudad">Ciudad</label>
+              <select id="ciudad">
+                <option>Todas</option>
+                <option>Medellín</option>
+                <option>Bogotá</option>
+                <option>Cali</option>
+                <option>Barranquilla</option>
+                <option>Remoto</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="modalidad">Modalidad</label>
+              <select id="modalidad">
+                <option>Cualquiera</option>
+                <option>Presencial</option>
+                <option>Híbrido</option>
+                <option>Remoto</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-summary">
+          <h3>Resumen</h3>
+          <p>Las ofertas más recientes se actualizan cada día para ayudarte a encontrar opciones reales y verificadas.</p>
+          <span class="highlight">+420 nuevas hoy</span>
+        </div>
+      </aside>
+
+      <section class="job-list" aria-label="Lista de empleos">
+        <article class="job-item">
+          <div class="pin"></div>
+          <div class="job-header">
+            <div>
+              <span class="job-badge">Nuevo</span>
+              <h3 class="job-title">Desarrollador Frontend</h3>
+              <div class="job-company">TekNova · Medellín</div>
+            </div>
+          </div>
+          <div class="job-meta">
+            <span>Híbrido</span>
+            <span>Tiempo completo</span>
+            <span>3 días atrás</span>
+          </div>
+          <p class="job-body">Buscamos un(a) desarrollador(a) con experiencia en interfaces modernas, React y buenas prácticas de UX para apoyar productos digitales con alto impacto.</p>
+          <div class="job-tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+          </div>
+          <div class="job-footer">
+            <span class="salary">$3.500.000 - $5.000.000</span>
+            <a href="empleo1.html" class="apply-btn">Ver oferta</a>
+          </div>
+        </article>
+
+        <article class="job-item">
+          <div class="pin"></div>
+          <div class="job-header">
+            <div>
+              <span class="job-badge">Urgente</span>
+              <h3 class="job-title">Diseñador UX/UI</h3>
+              <div class="job-company">Estudio Higuera · Bogotá</div>
+            </div>
+          </div>
+          <div class="job-meta">
+            <span>Remoto</span>
+            <span>Tiempo completo</span>
+            <span>1 día atrás</span>
+          </div>
+          <p class="job-body">Estamos buscando a una persona creativa para liderar investigaciones, prototipos y mejoras de experiencia en productos digitales para clientes del sector financiero.</p>
+          <div class="job-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Prototipos</span>
+          </div>
+          <div class="job-footer">
+            <span class="salary">$3.000.000 - $4.200.000</span>
+            <a href="#" class="apply-btn">Ver oferta</a>
+          </div>
+        </article>
+
+        <article class="job-item">
+          <div class="pin"></div>
+          <div class="job-header">
+            <div>
+              <span class="job-badge">Top</span>
+              <h3 class="job-title">Analista Contable</h3>
+              <div class="job-company">Grupo Almendra · Cali</div>
+            </div>
+          </div>
+          <div class="job-meta">
+            <span>Presencial</span>
+            <span>Tiempo completo</span>
+            <span>2 días atrás</span>
+          </div>
+          <p class="job-body">Se requiere profesional con conocimientos en NIIF, preparación de estados financieros y apoyo en procesos de control contable para empresa en crecimiento.</p>
+          <div class="job-tags">
+            <span class="tag">Excel</span>
+            <span class="tag">NIIF</span>
+            <span class="tag">Contabilidad</span>
+          </div>
+          <div class="job-footer">
+            <span class="salary">$2.200.000 - $2.800.000</span>
+            <a href="#" class="apply-btn">Ver oferta</a>
+          </div>
+        </article>
+
+        <article class="job-item">
+          <div class="pin"></div>
+          <div class="job-header">
+            <div>
+              <span class="job-badge">Nuevo</span>
+              <h3 class="job-title">Coordinador Logístico</h3>
+              <div class="job-company">Rutas del Sur · Medellín</div>
+            </div>
+          </div>
+          <div class="job-meta">
+            <span>Presencial</span>
+            <span>Tiempo completo</span>
+            <span>4 días atrás</span>
+          </div>
+          <p class="job-body">Requerimos un(a) profesional para gestionar procesos logísticos, coordinación de rutas, control de inventarios y seguimiento operativo.</p>
+          <div class="job-tags">
+            <span class="tag">Logística</span>
+            <span class="tag">SAP</span>
+            <span class="tag">Inventarios</span>
+          </div>
+          <div class="job-footer">
+            <span class="salary">$2.800.000 - $3.500.000</span>
+            <a href="#" class="apply-btn">Ver oferta</a>
+          </div>
+        </article>
+
+        <article class="job-item">
+          <div class="pin"></div>
+          <div class="job-header">
+            <div>
+              <span class="job-badge">Educación</span>
+              <h3 class="job-title">Docente de Matemáticas</h3>
+              <div class="job-company">Colegio Nuevo Horizonte · Envigado</div>
+            </div>
+          </div>
+          <div class="job-meta">
+            <span>Presencial</span>
+            <span>Medio tiempo</span>
+            <span>Hoy</span>
+          </div>
+          <p class="job-body">Vacante para docente con experiencia en bachillerato, orientación pedagógica y manejo de grupos, con enfoque en resultados y acompañamiento estudiantil.</p>
+          <div class="job-tags">
+            <span class="tag">Matemáticas</span>
+            <span class="tag">Bachillerato</span>
+            <span class="tag">Pedagogía</span>
+          </div>
+          <div class="job-footer">
+            <span class="salary">$2.500.000</span>
+            <a href="#" class="apply-btn">Ver oferta</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-stamp">Emp</div>
+          Banco de Empleos
+        </div>
+        <p>Conectamos personas con oportunidades de trabajo reales, claras y con propósito.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Empleos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="login.html">Ingresar</a></li>
+          <li><a href="registro.html">Registrarse</a></li>
+          <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boletín</h4>
+        <div class="news-card">
+          <h4>Recibe oportunidades</h4>
+          <div class="news-row">
+            <input type="email" placeholder="Tu correo">
+            <button type="button">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <p>© 2026 Banco de Empleos</p>
+      <p>Hecho con propósito para conectar talento y oportunidades.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

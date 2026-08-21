@@ -1,0 +1,23 @@
+﻿body.auth-screen{overflow:hidden; height:100vh;}
+body.auth-screen nav{position:fixed; top:0; left:0; width:100%; padding:10px 6vw; background:rgba(250,245,233,0.88); justify-content:flex-start; z-index:100;}
+body.auth-screen nav .logo,
+body.auth-screen nav .nav-links,
+body.auth-screen nav .nav-actions{display:none;}
+body.auth-screen .auth-back{display:inline-flex; align-items:center; gap:10px; font-size:0.92rem; font-weight:700; color:var(--ink); text-decoration:none; padding:8px 0;}
+body.auth-screen .auth-back:hover{text-decoration:underline;}
+.auth-page{padding:0 6vw; min-height:100vh; display:flex; align-items:center; justify-content:center;}
+.hero-inner{max-width:300px;}
+.auth-card{background:var(--card); border-radius:5px; padding:18px 16px; max-width:300px; width:100%; margin:0 auto; box-shadow:0 16px 30px rgba(0,0,0,0.16); border-top:4px solid var(--pin-red);}
+.auth-card h1{font-family:'Fraunces',serif; font-size:1.75rem; margin-bottom:10px;}
+.auth-copy{margin-top:0; margin-bottom:14px; color:var(--ink-soft); line-height:1.6;}
+.form-field{margin-bottom:12px;}
+.form-field label{display:block; margin-bottom:7px; font-family:'IBM Plex Mono',monospace; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft);}
+.form-field input{width:100%; padding:12px 14px; border:1px solid rgba(43,33,24,0.18); border-radius:4px; font-size:0.95rem; color:var(--ink); background:#fff; outline:none; transition:border-color 0.2s ease, box-shadow 0.2s ease;}
+.form-field input:focus{border-color:var(--pin-red); box-shadow:0 0 0 4px rgba(184,64,42,0.12);}
+.auth-submit{width:100%; margin-top:10px; padding:13px 0; border-radius:3px; background:var(--pin-red); color:#fdf6ec; font-weight:700; letter-spacing:0.02em; box-shadow:0 4px 0 var(--pin-red-dark); transition:transform 0.15s ease, box-shadow 0.15s ease;}
+.auth-submit:hover{transform:translateY(2px); box-shadow:0 2px 0 var(--pin-red-dark);}
+.auth-footer{margin-top:18px; text-align:center; color:var(--ink-soft); font-size:0.92rem;}
+.auth-link{color:var(--pin-red-dark); font-weight:700;}
+.auth-link:hover{text-decoration:underline;}
+@media (max-width:820px){.auth-page{padding-top:70px;}}
+@media (max-width:520px){.auth-card{padding:18px 16px;} .auth-page{padding:60px 6vw 80px;}}
